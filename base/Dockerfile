@@ -1,4 +1,4 @@
-FROM debian:9
+FROM debian:9 AS hadoop_base
 
 MAINTAINER Ivan Ermilov <ivan.s.ermilov@gmail.com>
 MAINTAINER Giannis Mouchakis <gmouchakis@iit.demokritos.gr>
