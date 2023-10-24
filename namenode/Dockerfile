@@ -10,13 +10,9 @@ RUN mkdir -p /hadoop/dfs/name
 VOLUME /hadoop/dfs/name
 
 ADD run.sh /run.sh
-ADD ./application /application
+ADD ./mapper_reducer.jar /mapper_reducer.jar
 RUN chmod a+x /run.sh
 
 EXPOSE 9870
-
-RUN curl -O https://dl.google.com/go/go1.21.3.linux-amd64.tar.gz
-RUN tar -xvzf go1.21.3.linux-amd64.tar.gz
-
 
 CMD ["/run.sh"]

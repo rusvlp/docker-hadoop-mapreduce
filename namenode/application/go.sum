@@ -1,0 +1,6 @@
+github.com/markchadwick/sortedpairs v0.0.0-20131022193924-673bac59b046 h1:kvUjr1jK+uu3WwAhEqe437TxMH3t7OwkJ3Jpo1U4TTQ=
+github.com/markchadwick/sortedpairs v0.0.0-20131022193924-673bac59b046/go.mod h1:c1uKzamtLJJpdTWsnL30Cdwzx5CAGtCARML+FYnjXBM=
+github.com/markchadwick/typedbytes v0.0.0-20131016230600-94293a733c99 h1:rKULmHFpnueM2I+OSTWgI4jXxd7wHo5BDzKVkR5MLgI=
+github.com/markchadwick/typedbytes v0.0.0-20131016230600-94293a733c99/go.mod h1:9Nm6rTV1+ctQ5ijeN33ZrIBzDeEgiBWoYeHoft67Ubw=
+github.com/vistarmedia/gossamr v0.0.0-20180209221417-3ade32666787 h1:qsXJ4eBOX681Z1+DmodoGVefIzpGyEEjuBUWa8M9AtY=
+github.com/vistarmedia/gossamr v0.0.0-20180209221417-3ade32666787/go.mod h1:hEqmQap5R6Q04F24eH54YLaZ+up4OfiIjj+hlwOrPoc=
