@@ -5,4 +5,4 @@
 #  sleep 5
 #done
 
-./main spark-master 9999 5
+./main 9999 5

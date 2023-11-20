@@ -1,10 +1,10 @@
 FROM golang:latest
 WORKDIR /
 
-ADD /tcpclient /tcpclient
+ADD /tcpserver /tcpserver
 ADD /start.sh /start.sh
 
-WORKDIR /tcpclient/internal
+WORKDIR /tcpserver/internal
 
 RUN go build main.go
 RUN mv main ../../main

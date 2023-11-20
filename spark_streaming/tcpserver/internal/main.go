@@ -77,9 +77,15 @@ func handleClient(skinGen *entity.SkinPriceGenerator, timeout int, conn net.Conn
 			return
 		}
 
-		json, err := json.MarshalIndent(skin, "", "\t")
+		jsonSkin, err := json.Marshal(skin)
 
-		_, err = conn.Write(json)
+		jsonSkinI, err := json.MarshalIndent(skin, "", "\t")
+
+		fmt.Println(string(jsonSkinI))
+
+		var endString byte = '\n'
+
+		_, err = conn.Write(append(jsonSkin, endString))
 
 		if err != nil {
 			fmt.Println("Closed connection on IP " + ip)
