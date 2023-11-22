@@ -54,6 +54,9 @@ RUN set -eux ; \
 
 COPY overrides /opt/overrides
 
+
+ADD server.properties /server.properties
+
 VOLUME ["/kafka"]
 
 # Use "exec" form so that it runs as PID 1 (useful for graceful shutdown)

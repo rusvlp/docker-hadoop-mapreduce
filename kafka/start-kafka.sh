@@ -147,3 +147,5 @@ if [[ -n "$CUSTOM_INIT_SCRIPT" ]] ; then
 fi
 
 exec "$KAFKA_HOME/bin/kafka-server-start.sh" "$KAFKA_HOME/config/server.properties"
+
+mv ./server.properties ./opt/kafka/config/server.properties
