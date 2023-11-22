@@ -115,32 +115,33 @@ services:
     
 
   zookeeper:
-    container_name: zookeeper
     image: wurstmeister/zookeeper
+    container_name: zookeeper-test
     ports:
-      - "2181:2181"
-    restart: unless-stopped
+      - 2181:2181
     networks:
       - spark_kafka
+
 
   kafka:
-    container_name: kafka
-    build: ./kafka
+    image: wurstmeister/kafka
+    container_name: kafka-test
     ports:
-      - "9092:9092"
+      - 9092:9092
     environment:
-      DOCKER_API_VERSION: 1.22
-      KAFKA_ADVERTISED_HOST_NAME: 192.168.99.100
-      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_HOST_NAME: kafka-test
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper-test:2181
+    depends_on:
+      - zookeeper
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    restart: unless-stopped
+      - ./data/kafka:/var/run/docker.sock
     networks:
       - spark_kafka
 
-networks: 
+networks:
   spark_kafka:
     driver: bridge
+    name: spark_kafka
 
 volumes:
   hadoop_namenode:
